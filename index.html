@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Outdoor Blanket | Cozy Outdoors</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header (simplified) -->
+    <header>
+        <div class="container">
+            <div class="logo">Cozy Outdoors</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="product-page container">
+        <div class="product-container">
+            <!-- Product Images Gallery -->
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="mainImage" src="assets/product-main.jpg" alt="Premium Outdoor Blanket">
+                    <!-- Zoom overlay will be added with JS -->
+                </div>
+                <div class="thumbnails-container">
+                    <div class="thumbnails-scroll">
+                        <div class="thumbnail active" data-image="assets/product-main.jpg">
+                            <img src="assets/product-thumb-1.jpg" alt="Product thumbnail 1">
+                        </div>
+                        <!-- More thumbnails here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-title">Premium Outdoor Blanket</h1>
+                <div class="product-price">$89.99</div>
+                <div class="product-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="reviews-count">(42 reviews)</span>
+                </div>
+                
+                <!-- Product Variants -->
+                <div class="product-variants">
+                    <div class="variant-group">
+                        <label>Color: <span id="selectedColor">Forest Green</span></label>
+                        <div class="color-options">
+                            <button class="color-swatch active" data-color="Forest Green" style="background-color: #2F4F4F;"></button>
+                            <button class="color-swatch" data-color="Mountain Blue" style="background-color: #4682B4;"></button>
+                            <button class="color-swatch" data-color="Desert Sand" style="background-color: #D2B48C;"></button>
+                            <button class="color-swatch" data-color="Sunset Red" style="background-color: #CD5C5C;"></button>
+                        </div>
+                        <button id="compareColorsBtn" class="text-button">Compare Colors</button>
+                    </div>
+                    
+                    <div class="variant-group">
+                        <label>Size: <span id="selectedSize">Medium</span></label>
+                        <div class="size-options">
+                            <button class="size-option" data-size="Small">S</button>
+                            <button class="size-option active" data-size="Medium">M</button>
+                            <button class="size-option" data-size="Large">L</button>
+                            <button class="size-option" data-size="X-Large">XL</button>
+                        </div>
+                        <button id="sizeChartBtn" class="text-button">Size Chart</button>
+                    </div>
+                </div>
+                
+                <!-- Add to Cart Section -->
+                <div class="add-to-cart-section">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="decreaseQty">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button class="qty-btn" id="increaseQty">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <!-- Product Info Tabs -->
+                <div class="product-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="information">Product Information</button>
+                        <button class="tab-btn" data-tab="shipping">Shipping Details</button>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-panel active" id="description">
+                            <p>Our Premium Outdoor Blanket is designed for all your adventures. Made with durable, water-resistant materials, it's perfect for camping, picnics, beach days, or just lounging in your backyard.</p>
+                            <p>The blanket features a soft fleece top layer for comfort and a rugged bottom layer to protect against moisture and dirt.</p>
+                        </div>
+                        <!-- More tab content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Bundle Section -->
+        <section class="product-bundle">
+            <h2>Complete Your Outdoor Set</h2>
+            <div class="bundle-container">
+                <!-- Bundle items here -->
+                <button class="add-bundle-btn">Add Bundle to Cart - $149.99</button>
+            </div>
+        </section>
+        
+        <!-- Complementary Products -->
+        <section class="complementary-products">
+            <h2>Pairs Well With</h2>
+            <div class="products-scroll">
+                <!-- Scrollable product cards here -->
+            </div>
+        </section>
+        
+        <!-- Related Products -->
+        <section class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="products-grid">
+                <!-- Grid of related products here -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modals -->
+    <div id="sizeChartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Size Chart</h2>
+            <table class="size-chart-table">
+                <!-- Size chart table here -->
+            </table>
+        </div>
+    </div>
+    
+    <div id="colorCompareModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Compare Colors</h2>
+            <div class="color-compare-container">
+                <!-- Color comparison content here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay"></div>
+    
+    <script src="js/product-gallery.js"></script>
+    <script src="js/product-variants.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

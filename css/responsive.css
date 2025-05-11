@@ -1,0 +1,85 @@
+/* Responsive styles */
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .product-container {
+        flex-direction: column;
+    }
+    
+    .product-images, .product-details {
+        width: 100%;
+    }
+    
+    .main-image {
+        height: 400px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (320px - 767px) */
+@media screen and (max-width: 767px) {
+    .main-image {
+        height: 300px;
+    }
+    
+    .thumbnail {
+        flex: 0 0 60px;
+        height: 60px;
+    }
+    
+    .product-title {
+        font-size: 1.5rem;
+    }
+    
+    .color-options, .size-options {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bundle-container {
+        flex-direction: column;
+    }
+    
+    .bundle-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .main-image {
+        height: 250px;
+    }
+    
+    .product-tabs {
+        margin-top: 20px;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+        padding: 10px 0;
+    }
+    
+    .tab-btn.active {
+        border-bottom: 1px solid var(--accent-color);
+    }
+}
